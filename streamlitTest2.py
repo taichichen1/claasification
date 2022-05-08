@@ -47,14 +47,14 @@ st.write("number of clesses", len(np.unique(y)))
 def add_parameter_ui(cls_name):
     params = dict()
     if cls_name == "KNN":
-        K = st.sliderbar.slider("K",1,15)
+        K = st.sidebar.slider("K",1,15)
         params["K"] = K
     elif cls_name == "SVM":
-        C = st.sliderbar.slider("C",0.01,10.0)
+        C = st.sidebar.slider("C",0.01,10.0)
         params["C"] = C
     else:
-        max_depth=st.slidebar("max_depth",2,15)
-        n_estimators=st.slidebar("n_estimators",1,100)
+        max_depth=st.sidebar("max_depth",2,15)
+        n_estimators=st.sidebar("n_estimators",1,100)
         params["max_depth"]=max_depth
         params["n_estimators"]=n_estimators
     return params
