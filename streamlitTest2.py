@@ -9,7 +9,7 @@ from sklearn import datasets
 
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
-from skealrn.ensamble import Randomforetclassifier
+from sklearn.ensamble import Randomforetclassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accurancy_score
 from sklearn.decomposition import PCA
