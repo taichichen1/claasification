@@ -22,9 +22,9 @@ st.write("""
  #Explore different classifer
 which one is the best?        
          """)
-dataset_name= st.siderbar.selectbox("Select Dataset", ("Iris", "Breast Cancer", "Wine dataset"))
+dataset_name= st.sliderbar.selectbox("Select Dataset", ("Iris", "Breast Cancer", "Wine dataset"))
 
-classifier_name= st.siderbar.selectbox("Select Classifier", ("KNN", "SVM", "Random Forest"))
+classifier_name= st.sliderbar.selectbox("Select Classifier", ("KNN", "SVM", "Random Forest"))
 
 
 def get_dataset(dataset_name):
@@ -47,14 +47,14 @@ st.write("number of clesses", len(np.unique(y)))
 def add_parameter_ui(cls_name):
     params = dict()
     if cls_name == "KNN":
-        K = st.siderbar.slider("K",1,15)
+        K = st.sliderbar.slider("K",1,15)
         params["K"] = K
     elif cls_name == "SVM":
-        C = st.siderbar.slider("C",0.01,10.0)
+        C = st.sliderbar.slider("C",0.01,10.0)
         params["C"] = C
     else:
-        max_depth=st.sidebar("max_depth",2,15)
-        n_estimators=st.sidebar("n_estimators",1,100)
+        max_depth=st.slidebar("max_depth",2,15)
+        n_estimators=st.slidebar("n_estimators",1,100)
         params["max_depth"]=max_depth
         params["n_estimators"]=n_estimators
     return params
