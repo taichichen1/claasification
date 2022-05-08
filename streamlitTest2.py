@@ -68,14 +68,14 @@ def get_classsifier(cls_name,params):
         cls=SVC(C=params["C"])
         
     else:
-        clf=RandomForestClassifier(n_estimators=params["n_estimators"],max_depth=params["max_depth"],randmo_state=1234)
+        clf=RandomForestClassifier(n_estimators=params["n_estimators"],max_depth=params["max_depth"],random_state=1234)
     return params
 
 params=add_parameter_ui(classifier_name)
 
 clf= get_classsifier(classifier_name, params)
 #Classification
-X_train, X_test, y_train, y_test= train_test_split(X,y,test_size=0.2)
+X_train, X_test, y_train, y_test= train_test_split(X,y,test_size=0.2,random_state=1234)
 clf.fit(X_train,y_train)
 
 y_pred=clf.predict(X_test)
