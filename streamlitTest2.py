@@ -36,7 +36,7 @@ def get_dataset(dataset_name):
         data = datasets.load_wine()
         
     X= data.data
-    Y=data.target
+    y=data.target
     return X, y
 
 X, y = get_dataset(dataset_name)
