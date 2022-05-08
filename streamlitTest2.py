@@ -60,7 +60,7 @@ def add_parameter_ui(cls_name):
     return params
 
 def get_classsifier(cls_name,params):
-    params = dict()
+   
     if cls_name == "KNN":
         cls = KNeighborsClassifier(n_neighbors=params["K"])
         
