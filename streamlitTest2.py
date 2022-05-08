@@ -84,7 +84,6 @@ st.write(f"Classifier={classifier_name}")
 st.write(f"accuracy={acc}")
 
 #PLOT
-####
 pca=PCA(2)
 X_projected = pca.fit_transform(X)
 X1=X_projected[:,0]
