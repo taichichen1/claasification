@@ -22,9 +22,9 @@ st.write("""
  #Explore different classifer
 which one is the best?        
          """)
-dataset_name= st.sliderbar.selectbox("Select Dataset", ("Iris", "Breast Cancer", "Wine dataset"))
+dataset_name= st.sidebar.selectbox("Select Dataset", ("Iris", "Breast Cancer", "Wine dataset"))
 
-classifier_name= st.sliderbar.selectbox("Select Classifier", ("KNN", "SVM", "Random Forest"))
+classifier_name= st.sidebar.selectbox("Select Classifier", ("KNN", "SVM", "Random Forest"))
 
 
 def get_dataset(dataset_name):
