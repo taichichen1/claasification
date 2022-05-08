@@ -90,11 +90,11 @@ X1=X_projected[:,0]
 
 X2=X_projected[:,1]   
 
-fig = plt.figure()
+fig,ax = plt.subplots()
 plt.scatter(X1,X2,c=y,alpha=0.8,cmap="viridis")
 plt.xlabel("Principlal Component 1")
 plt.ylabel("Principlal Component 2")
 plt.colorbar() 
 
 #plt.show()
-st.pyplot()
+st.pyplot(fig)
