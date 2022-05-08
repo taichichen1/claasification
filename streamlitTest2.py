@@ -68,7 +68,7 @@ def get_classsifier(cls_name,params):
         cls=SVC(C=params["C"])
         
     else:
-        clf=Randomforetclassifier(n_estimators=params["n_estimators"],max_depth=params["max_depth"],randmo_state=1234)
+        clf=RandomForestClassifier(n_estimators=params["n_estimators"],max_depth=params["max_depth"],randmo_state=1234)
     return params
 
 params=add_parameter_ui(classifier_name)
