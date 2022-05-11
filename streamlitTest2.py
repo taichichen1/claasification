@@ -30,8 +30,8 @@ classifier_name= st.sidebar.selectbox("Select Classifier", ("KNN", "SVM", "Rando
 def get_dataset(dataset_name):
     if dataset_name == "Iris":
         data = datasets.load_iris()
-    elif dataset_name == " Breast Cancer":
-        data = datasets.load_breat_cancer()
+    elif dataset_name == "Breast Cancer":
+        data = datasets.load_breast_cancer()
     else:
         data = datasets.load_wine()
         
